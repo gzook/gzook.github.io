@@ -1,0 +1,444 @@
+# read options here https://gohugo.io/getting-started/configuration/
+baseURL: "https://gzook.github.io/"
+title: Tim Munro
+languageCode: "en-us"
+theme: hugo-profile
+publishDir: "docs"
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  #main:
+    #- identifier: blog
+    #  name: Blog
+    #  title: Blog posts
+    #  url: /blogs
+    #  weight: 1
+    #- identifier: gallery
+    #  name: Gallery
+    #  title: Blog posts
+    #  url: /gallery
+    #  weight: 2
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "Tim Munro's Profile"
+  description: Personal profile page
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    disableThemeToggle: true
+    defaultTheme: "dark" # "dark" # "light"
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  color:
+  #   textColor:
+  #   secondaryTextColor:
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+  #   primaryColor: navy
+  #   secondaryColor: whitesmoke
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "Tim Munro" # Brand name for the brand | default is the title variable
+    disableSearch: true
+    # searchPlaceholder: "Search"
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hello, I'm"
+    title: "Tim."
+    subtitle: "Chief Technology Officer"
+    content: |-
+      I work at IntegrateHQ, an iPaaS startup that helps sales and marketing teams by automating data flows. I thrive when working in small teams
+      and startups, I love keeping up with the latest trends in software tech, and excel at rapidly building MVPs.
+    image: /images/tim.jpg
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: false
+      name: "Resume"
+      url: "#"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/tim-munro-0830b314
+        - icon: fab fa-twitter
+          url: https://twitter.com/timmunro
+      customIcons:
+        - icon: /images/ihq-logo-32x32.png
+          url: "https://www.integratehq.com"
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/tim2.jpg"
+    content: |-
+      I am a respected software architect and leader with over 20 years of industry experience. I led development of data integration
+      platforms at SaaS companies IntegrateHQ, Trujay Group, Adaptive Planning and myDIALS. I have developed reliable, business
+      critical data integrations with cloud systems including HubSpot, NetSuite, Salesforce, Microsoft Dynamics and Pipedrive; I have
+      created on-premises to cloud integrations leveraging custom developed, commercial & open-source middleware, connecting to
+      databases, flat files, and enterprise systems including Sage 100, and QuickBooks.
+      
+      I am hands on, I am an excellent communicator, I enjoy collaborating and have lived and worked in Australia, the US, Europe,
+      and South Africa.
+    skills:
+      enable: true
+      title: |- 
+        I am a full stack developer with strong operational and information security skills. Here are some technologies and
+        topics I've been applying recently:
+      items:
+        - "ReactJS"
+        - "TypeScript"
+        - "JavaScript"
+        - "Node.js"
+        - "Go (Golang)"
+        - ".NET"
+        - PostgreSQL
+        - APIs (REST, SOAP)
+        - AWS hosting
+        - ISO27001
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "Chief Technical Officer"
+        company: "IntegrateHQ"
+        companyUrl: "https://www.integratehq.com"
+        date: "Jul 2019 - present"
+        featuredLink:
+          enable: true
+          name: "View the company"
+          url: "https://www.integratehq.com"
+        info:
+          enable: false
+        content: |-
+          I am a co-founder and the CTO at IntegrateHQ, a multi-tenanted data integration iPaaS. IntegrateHQ is a sister company of Trujay,
+          with a focus on data integration between sales/marketing systems and other key operational systems (financial, ERP, BI).
+          Achievements:
+
+          - Applying deep knowledge of data integration and software development to design and lead development of IntegrateHQ’s data integration platform.
+          - Rapid development of connectors (API, database, file) to many common business systems.
+          - Developed IntegrateHQ’s ISO27001 compliant Information Security Management System and attained 3rd party accreditation.
+          - Recruited key engineering and services team members.
+
+          Tech stack: AWS hosting (VPCs, ALBs/NLBs, EC2, API Gateway, CloudFront, CodeBuild, EFS, S3, RDS, ...), PostgreSQL, Go(lang) API server,
+          Node.js data integrations (TypeScript, JavaScript), ReactJS, Docker, ElasticSearch.
+
+      - job: "VP, Product Development"
+        company: "Trujay"
+        companyUrl: "https://www.trujay.com"
+        date: "Oct 2016 - Jul 2019"
+        featuredLink:
+          enable: true
+          name: "View the company"
+          url: "https://www.trujay.com"
+        info:
+          enable: false
+          content: 
+        content: |-
+          I was the founding development team member of SaaS migration specialist company Trujay Group. Achievements:
+          - Lead development of the company’s flagship self-service CRM migration product.
+          - Assisted with acquisition of Data2CRM, helping create a successful specialist CRM migration company.
+
+          In 2019, after the Data2CRM acquisition, IntegrateHQ was spun out as a sister company focussed on data integration;
+          I moved across to run the product development.
+
+          Tech stack: AWS hosting (VPCs, ALBs/NLBs, EC2, API Gateway, CodeBuild, EFS, S3, RDS, ...), PostgreSQL, Go(lang) API server,
+          Node.js data integrations (JavaScript), Aurelia (UI), ElasticSearch.
+
+      - job: "Principal Consultant, Owner"
+        company: "Gzook"
+        companyUrl: "http://www.gzook.com"
+        date: "Jan 2016 - present"
+        info:
+          enable: false
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        content: |
+          I offer software consulting services and development through Gzook. Areas of expertise include cloud
+          computing (AWS), APIs and backend services, frontend UIs, mobile applications, information
+          security (ISO 27001). Data integration specialisation (middleware / ETL). Projects/engagements:
+          - Developed Xamarin mobile app for presentation of analytics dashboards.
+          - Web UI/cloud architecture consulting.
+          - Developed Xamarin mobile app (with associated back-end services) to facilitate consumer product purchases using Bitcoin.
+
+      - job: "Architect, Integration"
+        company: "myDIALS and Adaptive Planning"
+        date: "Aug 2006 - Dec 2015"
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        info:
+          enable: false          
+        content: |
+          Founding member of SaaS start-up myDIALS - a cloud based, business performance analytics platform allowing companies
+          to manage business and operational performance in near real time. myDIALS was acquired by Adaptive Planning (now Workday)
+          in Jul 2012. 
+
+          - Designed and led development of the data integration platform used to supply data to the myDIALS analytics platform.
+          - At Adaptive Insights, led enhancements to the myDIALS data integration product, driving it to become the data integration
+          platform used across the Adaptive suite of products.
+
+          Tech stack: AWS hosting, MySQL/MS SQL Server/Oracle, Java (integration runtime), C# (server/APIs), JavaScript UI, Pentaho
+          Data Integration (now Hitachi).
+
+      - job: "Diverse"
+        company: "Earlier"
+        #companyUrl: "https://example.com"
+        date: "prior to Jul 2006"
+        info:
+          enable: false         
+        content: |-
+          - Started my career at Citect (acquired by  Schneider Electric in 2006), a leading software company specialising
+          in industrial automation and process control.
+          - Launched the Brisbane practice for Consultel BWP, delivering IT consulting services and recruiting
+          consultants onto diverse government IT projects.
+          - I was a founding member of OpX Solutions, providing consulting, MES and industrial automation services to mining companies. All
+          OpX Solutions founders, including myself, joined software startup myDIALS at inception.
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Bachelor of Engineering (Mechanical)"
+        school:
+          name: "University of NSW, Sydney"
+          url: "https://www.unsw.edu.au"
+        #date: "2013 - 2015"
+        #GPA: "3.8 out of 5.0"
+        #content: |-
+        #  Extracurricular Activities
+        #    - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        #    - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+      - title: "Postgraduate Subjects (MBA related)"
+        school:
+          name: "Deakin University, Melbourne (remote)"
+          url: "https://www.deakin.edu.au"
+        #date: "2009 - 2013"
+        #GPA: "3.9 out of 5.0"
+        content: |-
+          I studied several subjects from the MBA postgraduate program.
+          - Financial Reporting and Analysis
+          - Economics for Managers
+          - Organisational Behaviour
+        #featuredLink:
+        #  enable: true
+        #  name: "My academic record"
+        #  url: "https://example.com"
+      - title: "Certified Scrum Master (lapsed)"
+        school:
+          name: "Scrum Alliance, Brisbane"
+          url: "https://www.scrumalliance.org/"
+        #GPA: "4.2 out of 5.0"
+        #featuredLink:
+        #  enable: true
+        #  url: "https://example.com"
+
+  # Achievements
+  achievements:
+    enable: false
+    # title: "Custom Name"
+    items:
+      - title: Google kickstart runner
+        content: I solved all problems with optimal solution.
+        url: https://example.com
+        image: /images/achievment.jpg
+      - title: Facebook Hackathon Winner
+        content: Developed a product using Artificial Intelligence.
+        image: /images/achievment.jpg
+      - title: Hugo Profile
+        content: Developed a theme and getting 1K+ downloads per month.
+        url: "https://github.com/gurusabarish/hugo-profile"
+        image: /images/achievment.jpg
+      - title: Microsoft Imagine Runner
+        content: We are developed a product which can help others.
+      - title: Google Summer of Code
+        content: Contributed to a open source project.
+        url: https://example.com
+
+  # projects
+  projects:
+    enable: false
+    # title: "Custom Name"
+    items:
+      - title: Hugo Profile
+        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
+        image: /images/projects/profile.png
+        featured:
+          name: Demo
+          link: https://hugo-profile.netlify.app
+        badges:
+          - "Hugo"
+          - "Bootstrap"
+          - "Javascript"
+        links:
+          - icon: fa fa-envelope
+            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/hugo-profile
+          - icon: fab fa-twitter
+            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+
+      - title: Image Converter
+        content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
+        image: /images/projects/converter.jpg
+        featured:
+          name: Demo
+          link: https://django-converter.herokuapp.com
+        badges:
+          - "Django"
+          - "Bootstrap"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/converter
+
+      - title: Hugo Profile V2
+        content: A clean and simple Hugo template for personal portfolio and blog.
+        image: /images/projects/profile2.jpg
+        featured:
+          name: Demo V2
+          link: https://hugo-profile-2.netlify.app
+        badges:
+          - "Hugo"
+          - "Bootstrap"
+          - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/HugoProfileV2
+
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: I look forward to hearing from you!
+    email: tim@gzook.com
+    btnName: Mail me
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      #github: https://github.com
+      linkedin: https://www.linkedin.com/in/tim-munro-0830b314
+      twitter: https://twitter.com/timmunro
+      #instagram: https://instagram.com
+      #facebook: https://facebook.com
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
