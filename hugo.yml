@@ -223,7 +223,7 @@ params:
           I moved across to run the product development.
 
           Tech stack: AWS hosting (VPCs, ALBs/NLBs, EC2, API Gateway, CodeBuild, EFS, S3, RDS, ...), PostgreSQL, Go(lang) API server,
-          Node.js data integrations (JavaScript), Aurelia (UI), ElasticSearch.
+          Node.js data integrations (JavaScript), Aurelia (UI), Netlify, ElasticSearch.
 
       - job: "Principal Consultant, Owner"
         company: "Gzook"
