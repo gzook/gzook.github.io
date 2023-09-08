@@ -124,7 +124,7 @@ params:
     content: |-
       I work at IntegrateHQ, an iPaaS startup that helps sales and marketing teams by automating data flows. I thrive when working in small teams
       and startups, I love keeping up with the latest trends in software tech, and excel at rapidly building MVPs.
-    image: /images/tim.jpg
+    image: /images/tim.png
     bottomImage:
       enable: true
     # roundImage: true # Make hero image circular | default false
